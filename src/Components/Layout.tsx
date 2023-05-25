@@ -3,7 +3,7 @@ import { PropsWithChildren, useEffect } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.main`
-  width: 100%;
+  width: 1050px;
   margin: 0 auto;
   padding: 0 2rem;
   padding-top: 2rem;
@@ -24,7 +24,7 @@ const Container = styled.main`
   }
 
   @media (min-width: 1200px) {
-    max-width: 1140px;
+    max-width: 1050px;
   }
 `
 

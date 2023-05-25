@@ -4,12 +4,38 @@ import { NextPage } from 'next'
 import Head from 'next/head'
 import styled from 'styled-components'
 import { Box } from '@/Components/Box'
+import Grid from '@/Components/Grid'
+import ColumnOne from '@/Components/ColumnOne'
+import ColumnTwo from '@/Components/ColumnTwo'
+import Spacer from '@/Components/Spacer'
+import BottomColumns from '@/Components/BottomColumns'
+
+const FalseContainer = styled.div`
+  font-family: 'Roboto Slab', serif;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  height: 600px;
+  border: 1px solid black;
+  border-radius: 8px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justifycontent: center;
+    alignitems: center;
+    font-size: 2.5em;
+    width: 400px;
+    height: 300px;
+  }
+`
 
 const Title = styled.h1`
   font-size: 4em;
   color: ${Color.Black};
   @media (max-width: 768px) {
-    font-size: 2em;
+    font-size: 3em;
     width: 400px;
   }
 `
@@ -25,30 +51,24 @@ const Home: NextPage = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <Title>{title}</Title>
-      <br />
+      <Spacer size={2} />
       <Box className='card-body'>
         I am a <strong>Senior Full Stack Software Engineer</strong>, with a passion for <strong>bold beautiful designs</strong> and{' '}
         <strong>blazing load speeds</strong>, but my real super power is bringing people together as a team.
       </Box>
-      <br />
+      <Spacer size={5} />
       <Cards />
-      <br />
+      <Spacer size={5} />
       <Title>My Projects</Title>
-      <br />
-      <div
-        style={{
-          display: 'flex',
-          width: '800px',
-          height: '600px',
-          justifyContent: 'center',
-          alignItems: 'center',
-          border: '1px solid black',
-          borderRadius: '8px',
-        }}
-      >
-        Test Content
-      </div>
-      <br />
+      <Spacer size={2} />
+      <FalseContainer>Coming Soon...</FalseContainer>
+      <Spacer size={5} />
+      <Grid columns={2}>
+        <ColumnOne />
+        <ColumnTwo />
+      </Grid>
+      <Spacer size={2} />
+      <BottomColumns />
     </>
   )
 }

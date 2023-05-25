@@ -14,15 +14,20 @@ export const Box = styled.div`
   }
 `
 
-export const NoLineBox = styled.div`
+interface BoxProps {
+  width?: string
+  fontSize?: number
+}
+
+export const NoLineBox = styled.div<BoxProps>`
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 2em;
-  width: 760px;
+  font-size: ${(p) => p.fontSize || '2em'};
+  width: ${(p) => p.width || '760px'};
   padding-bottom: 1rem;
   padding-top: 1rem;
   @media (max-width: 768px) {
-    font-size: 1.5em;
-    width: 400px;
+    font-size: ${(p) => p.fontSize || '1.5em'};
+    width: ${(p) => p.width || '400px'};
   }
 `
 
