@@ -11,10 +11,12 @@ const Container = styled.main`
 
   @media (min-width: 600px) {
     max-width: 540px;
+    margin: auto;
   }
 
   @media (min-width: 768px) {
     max-width: 720px;
+    margin: auto;
   }
 
   @media (min-width: 992px) {
