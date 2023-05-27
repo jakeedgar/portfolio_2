@@ -37,16 +37,6 @@ const Title = styled.h1`
   }
 `
 
-const GlassContainer = styled.div`
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  width: fit-content;
-`
-
 const title = '[jakeedgar.dev]'
 
 const Layout: React.FC<PropsWithChildren> = ({ children }) => {
@@ -57,9 +47,8 @@ const Layout: React.FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <Container>
-      <GlassContainer>
-        <Title onClick={handleReturnToTop}>{title}</Title>
-      </GlassContainer>
+      <Title onClick={handleReturnToTop}>{title}</Title>
+
       <br />
       {children}
     </Container>
