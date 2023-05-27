@@ -23,8 +23,8 @@ const BottomColumns: React.FC = () => {
           <p>Years of Experience</p>
         </NoLineBox>
         <NoLineBox fontSize={0.75} width='200px'>
-          <BigNumber>5+</BigNumber>
-          <p>Completed Full-Stack Websites</p>
+          <BigNumber>Dozens</BigNumber>
+          <p>Of Completed Full-Stack Projects</p>
         </NoLineBox>
         <NoLineBox fontSize={0.75} width='200px'>
           <BigNumber>49+</BigNumber>

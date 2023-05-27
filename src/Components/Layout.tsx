@@ -7,9 +7,6 @@ const Container = styled.main`
   margin: 0 auto;
   padding: 0 2rem;
   padding-top: 2rem;
-  background-color: ${Color.White};
-  min-height: 100vh;
-  scroll-behavior: smooth;
 
   @media (min-width: 600px) {
     max-width: 540px;
