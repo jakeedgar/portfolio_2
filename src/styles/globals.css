@@ -1,11 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;500&display=swap');
 :root {
   --max-width: 1100px;
 }
+
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.card-body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 html,

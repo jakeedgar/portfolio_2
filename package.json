@@ -20,6 +20,8 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@react-spring/parallax": "^9.7.2",
+    "@react-spring/types": "^9.7.2",
     "@types/styled-components": "^5.1.26",
     "babel-loader": "^9.1.2",
     "babel-plugin-styled-components": "^2.1.3",

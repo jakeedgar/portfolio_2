@@ -20,6 +20,11 @@
     "editor.formatOnSave": true,
     "editor.renderWhitespace": "all",
     "editor.acceptSuggestionOnEnter": "off"
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
  }
  
