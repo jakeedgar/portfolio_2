@@ -13,6 +13,15 @@ const FormContainer = styled.div`
   width: 400px;
 `
 
+const FormContainerTwo = styled.div`
+  box-sizing: border-box;
+  position: absolute;
+  width: 125px;
+  height: 31px;
+  background: #ece9ea;
+  border-bottom: 1px solid ${Color.Black};
+`
+
 const Label = styled.label`
   margin-bottom: 1rem;
   display: flex;
@@ -38,14 +47,14 @@ const Button = styled.button`
   padding: 0.5rem 1rem;
   border-radius: 4px;
   border: none;
-  background-color: #007bff;
-  color: white;
+  background-color: ${Color.Black};
+  color: ${Color.White};
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: flex;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: #17141390;
   }
 `
 function ContactForm() {

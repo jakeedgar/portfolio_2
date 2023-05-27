@@ -5,7 +5,7 @@ interface WindowSize {
   height: number | undefined
 }
 
-export const useWindowSize = (): WindowSize => {
+const useWindowSize = (): WindowSize => {
   const isSSR = typeof window === 'undefined'
 
   const [windowSize, setWindowSize] = useState<WindowSize>({
@@ -32,7 +32,9 @@ export const useWindowSize = (): WindowSize => {
   return windowSize
 }
 
-export function useContactForm(form_endpoint: string) {
+export { useWindowSize }
+
+const useContactForm = (form_endpoint: string) => {
   const [status, setStatus] = useState<string>()
 
   const handleFormSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
@@ -89,6 +91,8 @@ export function useContactForm(form_endpoint: string) {
   return { status, handleFormSubmit }
 }
 
+export { useContactForm }
+
 // Here goes the rest of the code...
 
 function useEmail(endpointUrl: string) {
@@ -144,3 +148,16 @@ function useEmail(endpointUrl: string) {
 }
 
 export { useEmail }
+
+const useSmoothScroll = () => {
+  useEffect(() => {
+    const originalStyle = window.getComputedStyle(document.body).scrollBehavior
+    document.body.style.scrollBehavior = 'smooth'
+
+    return () => {
+      document.body.style.scrollBehavior = originalStyle
+    }
+  }, [])
+}
+
+export { useSmoothScroll }

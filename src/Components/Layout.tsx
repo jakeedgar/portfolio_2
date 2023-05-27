@@ -1,6 +1,7 @@
 import { Color } from '@/utils/colors'
 import { PropsWithChildren, useEffect } from 'react'
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 
 const Container = styled.main`
   width: 1050px;
@@ -48,23 +49,12 @@ const GlassContainer = styled.div`
 
 const title = '[jakeedgar.dev]'
 
-const useSmoothScroll = () => {
-  useEffect(() => {
-    const originalStyle = window.getComputedStyle(document.body).scrollBehavior
-    document.body.style.scrollBehavior = 'smooth'
-
-    return () => {
-      document.body.style.scrollBehavior = originalStyle
-    }
-  }, [])
-}
-
 const Layout: React.FC<PropsWithChildren> = ({ children }) => {
-  useSmoothScroll()
+  const router = useRouter()
   const handleReturnToTop = () => {
-    // TODO: Finish this function
-    console.log('Finish me!')
+    router.push('/')
   }
+
   return (
     <Container>
       <GlassContainer>
