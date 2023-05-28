@@ -34,3 +34,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.alice-carousel__dots {
+  margin-left: 3rem !important;
+}

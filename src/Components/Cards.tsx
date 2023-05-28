@@ -18,7 +18,6 @@ const Card = styled.div<CardProps>`
   height: 240px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  border: 1px solid ${Color.Black};
   background-color: ${Color.Green};
   color: ${Color.White};
 

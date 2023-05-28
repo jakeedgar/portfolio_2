@@ -15,6 +15,7 @@ import { useWindowSize } from '@/utils/hooks'
 import ContactForm from '@/Components/ContactForm'
 import { ListContainer, ListItem } from '@/Components/List'
 import { Paragraph } from '@/Components/Paragraph'
+import Carousel from '@/Components/Carousel'
 
 // Add comment for deployment
 
@@ -86,7 +87,7 @@ const Home: NextPage = () => {
       <Cards />
       <Spacer size={5} />
       <Title>My Projects</Title>
-      <FalseContainer>Coming Soon...</FalseContainer>
+      <Carousel />
       <Spacer size={10} />
       <Grid columns={2}>
         <ColumnOne />
