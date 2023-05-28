@@ -45,13 +45,24 @@ const Title = styled.h1`
   @media (max-width: 768px) {
     font-size: 3em;
     width: 400px;
+    padding: 1rem;
+    margin: 1rem;
+  }
+`
+
+const ListDiv = styled.div`
+  width: 350px;
+  color: ${Color.Green};
+  font-size: 1.25em;
+  @media (max-width: 768px) {
+    margin: 1rem;
+    padding: 1rem;
   }
 `
 
 const Home: NextPage = () => {
   const title = `Hi, I'm Jake`
   const parallax = useRef<IParallax>(null)
-  const windowSize = useWindowSize()
 
   return (
     <>
@@ -94,13 +105,7 @@ const Home: NextPage = () => {
         <Spacer size={5} />
 
         <Grid columns={2} gap={'8px'}>
-          <div
-            style={{
-              width: '350px',
-              color: Color.Green,
-              fontSize: '1.25em',
-            }}
-          >
+          <ListDiv>
             <Paragraph>I am currently open to both contract and Full-Time positions. I am confident I can fill the roll of any of the following:</Paragraph>
             <br />
             <ListContainer color={Color.Green}>
@@ -112,7 +117,7 @@ const Home: NextPage = () => {
             </ListContainer>
             <br />
             <Paragraph>Please reach out via the following form, and I`ll get back to you as soon as possible.</Paragraph>
-          </div>
+          </ListDiv>
 
           <ContactForm />
         </Grid>

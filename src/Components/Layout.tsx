@@ -47,6 +47,10 @@ const Title = styled.h1`
     cursor: pointer;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   }
+  @media (max-width: 768px) {
+    margin: 1rem;
+    padding: 1rem;
+  }
 `
 
 const title = '[jakeedgar.dev]'

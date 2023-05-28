@@ -1,6 +1,11 @@
 import { Color } from '@/utils/colors'
 import styled from 'styled-components'
 
+export enum fontFam {
+  Barlow = "Barlow Semi Condensed', sans-serif;",
+  Slab = "'Roboto Slab', serif;",
+}
+
 export const Box = styled.div`
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 2.5em;
@@ -10,7 +15,8 @@ export const Box = styled.div`
   border-bottom: 3px solid ${Color.Black};
   @media (max-width: 768px) {
     font-size: 1.5em;
-    width: 400px;
+    width: 350px;
+    margin: 1rem;
   }
 `
 
@@ -27,7 +33,7 @@ export const NoLineBox = styled.div<BoxProps>`
   padding-top: 1rem;
   @media (max-width: 768px) {
     font-size: ${(p) => p.fontSize || '1.5em'};
-    width: ${(p) => p.width || '400px'};
+    width: ${(p) => p.width || '350px'};
   }
 `
 
@@ -37,12 +43,9 @@ export const SlabBox = styled.div`
   width: 760px;
   padding: 2rem 0;
   @media (max-width: 768px) {
-    font-size: 1.5em;
-    width: 400px;
+    font-size: 2em;
+    width: 350px;
+    padding: 1rem;
+    margin: 1rem;
   }
 `
-
-export type GridProps = {
-  gap: number
-  columns: number
-}
