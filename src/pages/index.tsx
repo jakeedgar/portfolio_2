@@ -85,17 +85,6 @@ const Home: NextPage = () => {
       <Spacer size={3} />
       <BottomColumns />
       <Spacer size={3} />
-      {/* <DivWithBackground image={image.toString()}>test</DivWithBackground> */}
-      {/* <Image
-        src={image}
-        alt='this is the image'
-        style={{
-          marginRight: 'auto',
-          position: 'absolute',
-          zIndex: -1,
-        }}
-      /> */}
-      <Spacer size={3} />
       <div
         style={{
           zIndex: 10,
@@ -127,6 +116,7 @@ const Home: NextPage = () => {
 
           <ContactForm />
         </Grid>
+        <Spacer size={3} />
       </div>
     </>
   )

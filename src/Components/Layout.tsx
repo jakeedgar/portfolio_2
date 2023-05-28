@@ -1,7 +1,8 @@
-import { Color } from '@/utils/colors'
-import { PropsWithChildren, useEffect } from 'react'
+import { useEffect } from 'react'
+import { PropsWithChildren } from 'react'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
+import { Color } from '@/utils/colors'
 
 const Container = styled.main`
   width: 1050px;
@@ -9,9 +10,18 @@ const Container = styled.main`
   padding: 0 2rem;
   padding-top: 2rem;
 
-  @media (min-width: 600px) {
+  @media (max-width: 480px) {
+    max-width: 420px;
+    margin: auto;
+    padding: 0 0.25rem;
+    overflow: hidden;
+  }
+
+  @media (max-width: 600px) {
     max-width: 540px;
     margin: auto;
+    padding: 0 0.25rem;
+    overflow: hidden;
   }
 
   @media (min-width: 768px) {
@@ -41,8 +51,27 @@ const Title = styled.h1`
 
 const title = '[jakeedgar.dev]'
 
-const Layout: React.FC<PropsWithChildren> = ({ children }) => {
+const Layout: React.FC<PropsWithChildren<{}>> = ({ children }) => {
   const router = useRouter()
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 600) {
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = 'auto'
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+    handleResize() // Call it initially
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      document.body.style.overflow = 'auto' // Reset it when component unmounts
+    }
+  }, [])
+
   const handleReturnToTop = () => {
     router.push('/')
   }
@@ -50,7 +79,6 @@ const Layout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <Container>
       <Title onClick={handleReturnToTop}>{title}</Title>
-
       <br />
       {children}
     </Container>

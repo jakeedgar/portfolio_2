@@ -86,16 +86,23 @@ const ContactForm = () => {
 
   if (status) {
     return (
-      <NoLineBox>
-        Thank you!
-        <div
-          style={{
-            padding: '1rem',
-          }}
-        >
-          {status}
-        </div>
-      </NoLineBox>
+      <div
+        style={{
+          width: '350px',
+          justifyContent: 'left',
+        }}
+      >
+        <NoLineBox>
+          Thank you!
+          <div
+            style={{
+              padding: '1rem',
+            }}
+          >
+            {status}
+          </div>
+        </NoLineBox>
+      </div>
     )
   }
   return (
@@ -122,7 +129,6 @@ const ContactForm = () => {
                 type='tel'
                 placeholder='Your Phone...'
                 placeholderColor={Color.LightGreen}
-                required
               />
             </div>
             <div>

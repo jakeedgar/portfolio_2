@@ -7,7 +7,8 @@ import { Paragraph } from './Paragraph'
 
 const Card = styled.div`
   padding-left: 1rem;
-  width: 400px;
+  padding-right: 1rem;
+  max-width: 350px;
   height: 240px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -28,7 +29,9 @@ const Cards: React.FC = () => {
         {data.map((item, index) => {
           return (
             <Card key={`card-${index}`}>
-              <NoLineBox>{item.title}</NoLineBox>
+              <NoLineBox fontSize={1.75} width={'350px'}>
+                {item.title}
+              </NoLineBox>
               <Paragraph>{item.content}</Paragraph>
             </Card>
           )

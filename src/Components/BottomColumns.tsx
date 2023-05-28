@@ -16,7 +16,11 @@ export const Box = styled.div`
 
 const BottomColumns: React.FC = () => {
   return (
-    <Box>
+    <Box
+      style={{
+        paddingLeft: 0,
+      }}
+    >
       <Grid columns={3} gap={'12px'}>
         <NoLineBox fontSize={0.75} width='200px'>
           <BigNumber>5+</BigNumber>
