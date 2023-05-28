@@ -36,5 +36,13 @@ a {
 }
 
 .alice-carousel__dots {
+  text-align: center;
   margin-left: 3rem !important;
+}
+
+@media (max-width: 560px) {
+  .alice-carousel__dots {
+    padding: 1rem;
+    text-align: left !important;
+  }
 }

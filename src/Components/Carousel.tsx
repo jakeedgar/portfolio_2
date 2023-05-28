@@ -8,12 +8,11 @@ import { useWindowSize } from '@/utils/hooks'
 import { styled } from 'styled-components'
 
 const Container = styled.div`
+  width: 80vw;
   margin-top: 2rem;
-  text-align: center;
   border-radius: 8px;
-  @media (max-width: 768px) {
+  @media (max-width: 560px) {
     padding: 1rem;
-    text-align: left;
   }
 `
 
@@ -35,6 +34,7 @@ const Carousel = () => {
     <Image
       style={{
         borderRadius: '8px',
+        objectFit: 'cover',
       }}
       width={width * 0.8}
       data-value={1}
@@ -45,6 +45,7 @@ const Carousel = () => {
     <Image
       style={{
         borderRadius: '8px',
+        objectFit: 'cover',
       }}
       width={width * 0.8}
       data-value={2}

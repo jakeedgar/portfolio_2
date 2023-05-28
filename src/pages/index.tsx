@@ -16,29 +16,7 @@ import ContactForm from '@/Components/ContactForm'
 import { ListContainer, ListItem } from '@/Components/List'
 import { Paragraph } from '@/Components/Paragraph'
 import Carousel from '@/Components/Carousel'
-
-// Add comment for deployment
-
-const FalseContainer = styled.div`
-  font-family: 'Roboto Slab', serif;
-  font-size: 4em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1000px;
-  height: 600px;
-  border: 1px solid black;
-  border-radius: 8px;
-
-  @media (max-width: 768px) {
-    display: flex;
-    justifycontent: center;
-    alignitems: center;
-    font-size: 2.5em;
-    width: 400px;
-    height: 300px;
-  }
-`
+import { Waves } from '@/Components/Waves'
 
 const Title = styled.h1`
   font-size: 4em;
@@ -121,9 +99,18 @@ const Home: NextPage = () => {
           </ListDiv>
 
           <ContactForm />
+          <div
+            style={{
+              justifyContent: 'center',
+              marginLeft: '-1rem',
+              position: 'absolute',
+            }}
+          >
+            {/* <Waves /> */}
+          </div>
         </Grid>
-        <Spacer size={3} />
       </div>
+      <Spacer size={3} />
     </>
   )
 }
